@@ -76,8 +76,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       //MARK: - Configure View
       func configureView() {
         segmentedControl.selectedSegmentIndex = 0
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 80
         navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: 0.3725, blue: 0.3529, alpha: 1.0)
         segmentedControl.addUnderlineForSelectedSegment()
         self.title = "Индивидуальный учебный план"
@@ -164,5 +162,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             break
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55.0
     }
 }
