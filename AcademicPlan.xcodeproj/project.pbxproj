@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B9FB88C558AFE1415F2919B /* Pods_AcademicPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4E06DB5D7B735A83919EAE /* Pods_AcademicPlan.framework */; };
+		FE5B8E222842626100C33C25 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B8E212842626100C33C25 /* PlanTableViewCell.swift */; };
 		FE5CEA5F284007270091B812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA5E284007270091B812 /* AppDelegate.swift */; };
 		FE5CEA61284007270091B812 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA60284007270091B812 /* SceneDelegate.swift */; };
 		FE5CEA63284007270091B812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA62284007270091B812 /* ViewController.swift */; };
 		FE5CEA66284007270091B812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5CEA64284007270091B812 /* Main.storyboard */; };
 		FE5CEA682840072E0091B812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5CEA672840072E0091B812 /* Assets.xcassets */; };
 		FE5CEA6B2840072E0091B812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5CEA692840072E0091B812 /* LaunchScreen.storyboard */; };
+		FE5CEA73284007B30091B812 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA72284007B30091B812 /* TableHeaderView.swift */; };
+		FE5CEA78284009070091B812 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA77284009070091B812 /* Data.swift */; };
+		FE5CEA7A284009350091B812 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = FE5CEA79284009350091B812 /* Data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DCB823B9B16FAF37F84C64A /* Pods-AcademicPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPlan.debug.xcconfig"; path = "Target Support Files/Pods-AcademicPlan/Pods-AcademicPlan.debug.xcconfig"; sourceTree = "<group>"; };
+		66276F946C4D5204544AE376 /* Pods-AcademicPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPlan.release.xcconfig"; path = "Target Support Files/Pods-AcademicPlan/Pods-AcademicPlan.release.xcconfig"; sourceTree = "<group>"; };
+		6A4E06DB5D7B735A83919EAE /* Pods_AcademicPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademicPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5B8E212842626100C33C25 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		FE5CEA5B284007270091B812 /* AcademicPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademicPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5CEA5E284007270091B812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5CEA60284007270091B812 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		FE5CEA672840072E0091B812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE5CEA6A2840072E0091B812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE5CEA6C2840072E0091B812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE5CEA72284007B30091B812 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		FE5CEA77284009070091B812 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		FE5CEA79284009350091B812 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9FB88C558AFE1415F2919B /* Pods_AcademicPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26658064749050B563BDBDB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A4E06DB5D7B735A83919EAE /* Pods_AcademicPlan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		907D569BE37BB1BE1F80323A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DCB823B9B16FAF37F84C64A /* Pods-AcademicPlan.debug.xcconfig */,
+				66276F946C4D5204544AE376 /* Pods-AcademicPlan.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE5B8E1E284260A400C33C25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE5CEA62284007270091B812 /* ViewController.swift */,
+				FE5B8E212842626100C33C25 /* PlanTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE5B8E20284260DC00C33C25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE5CEA64284007270091B812 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FE5CEA52284007270091B812 = {
 			isa = PBXGroup;
 			children = (
 				FE5CEA5D284007270091B812 /* AcademicPlan */,
 				FE5CEA5C284007270091B812 /* Products */,
+				907D569BE37BB1BE1F80323A /* Pods */,
+				26658064749050B563BDBDB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +106,26 @@
 		FE5CEA5D284007270091B812 /* AcademicPlan */ = {
 			isa = PBXGroup;
 			children = (
+				FE5B8E20284260DC00C33C25 /* View */,
+				FE5CEA79284009350091B812 /* Data.json */,
+				FE5B8E1E284260A400C33C25 /* Controller */,
+				FE5CEA76284008F70091B812 /* Model */,
 				FE5CEA5E284007270091B812 /* AppDelegate.swift */,
 				FE5CEA60284007270091B812 /* SceneDelegate.swift */,
-				FE5CEA62284007270091B812 /* ViewController.swift */,
-				FE5CEA64284007270091B812 /* Main.storyboard */,
 				FE5CEA672840072E0091B812 /* Assets.xcassets */,
 				FE5CEA692840072E0091B812 /* LaunchScreen.storyboard */,
 				FE5CEA6C2840072E0091B812 /* Info.plist */,
+				FE5CEA72284007B30091B812 /* TableHeaderView.swift */,
 			);
 			path = AcademicPlan;
+			sourceTree = "<group>";
+		};
+		FE5CEA76284008F70091B812 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE5CEA77284009070091B812 /* Data.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE5CEA6F2840072E0091B812 /* Build configuration list for PBXNativeTarget "AcademicPlan" */;
 			buildPhases = (
+				D06DCDD21EDF1D8ECA388974 /* [CP] Check Pods Manifest.lock */,
 				FE5CEA57284007270091B812 /* Sources */,
 				FE5CEA58284007270091B812 /* Frameworks */,
 				FE5CEA59284007270091B812 /* Resources */,
+				7A2E07132D6C5A570603C8F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,16 +191,62 @@
 				FE5CEA6B2840072E0091B812 /* LaunchScreen.storyboard in Resources */,
 				FE5CEA682840072E0091B812 /* Assets.xcassets in Resources */,
 				FE5CEA66284007270091B812 /* Main.storyboard in Resources */,
+				FE5CEA7A284009350091B812 /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A2E07132D6C5A570603C8F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AcademicPlan/Pods-AcademicPlan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AcademicPlan/Pods-AcademicPlan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AcademicPlan/Pods-AcademicPlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06DCDD21EDF1D8ECA388974 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AcademicPlan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE5CEA57284007270091B812 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5B8E222842626100C33C25 /* PlanTableViewCell.swift in Sources */,
+				FE5CEA78284009070091B812 /* Data.swift in Sources */,
+				FE5CEA73284007B30091B812 /* TableHeaderView.swift in Sources */,
 				FE5CEA63284007270091B812 /* ViewController.swift in Sources */,
 				FE5CEA5F284007270091B812 /* AppDelegate.swift in Sources */,
 				FE5CEA61284007270091B812 /* SceneDelegate.swift in Sources */,
@@ -282,6 +391,7 @@
 		};
 		FE5CEA702840072E0091B812 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DCB823B9B16FAF37F84C64A /* Pods-AcademicPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +409,7 @@
 		};
 		FE5CEA712840072E0091B812 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66276F946C4D5204544AE376 /* Pods-AcademicPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
