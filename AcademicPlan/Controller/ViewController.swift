@@ -76,10 +76,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       //MARK: - Configure View
       func configureView() {
         segmentedControl.selectedSegmentIndex = 0
-        navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: 0.3725, blue: 0.3529, alpha: 1.0)
         segmentedControl.addUnderlineForSelectedSegment()
-        self.title = "Индивидуальный учебный план"
-        
+          navigationItem.title = "Индивидуальный учебный план"
+          let appearance = UINavigationBarAppearance()
+          appearance.configureWithOpaqueBackground()
+          appearance.backgroundColor = UIColor(red: 1, green: 0.3725, blue: 0.3529, alpha: 1.0)
+          appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+          navigationController?.navigationBar.standardAppearance = appearance;
+          navigationController?.navigationBar.scrollEdgeAppearance = appearance;
+          navigationController?.navigationBar.isTranslucent = true
     }
     
         //MARK: - Fetch Student Data
@@ -90,11 +96,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                      let studentData = try JSONDecoder().decode(Root.self, from: data)
                         discipline = studentData
 
-                    DispatchQueue.main.async {
-                        self.academicYearLabel.text = "ИНДИВИУАЛЬНЫЙ УЧЕБЫЙ ПЛАН НА \(studentData.academicYear.uppercased())"
-                         self.tableView.reloadData()
-                             self.segmentedControl.setTitle("Семестр \(String(describing: self.discipline!.semesters[0].Number))", forSegmentAt: 0)
-                                    self.segmentedControl.setTitle("Семестр \(String(describing: self.discipline!.semesters[1].Number))", forSegmentAt: 1)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.academicYearLabel.text = "ИНДИВИУАЛЬНЫЙ УЧЕБЫЙ ПЛАН НА \(studentData.academicYear.uppercased())"
+                         self?.tableView.reloadData()
+                             self?.segmentedControl.setTitle("Семестр \(String(describing: self?.discipline!.semesters[0].Number))", forSegmentAt: 0)
+                                    self?.segmentedControl.setTitle("Семестр \(String(describing: self?.discipline!.semesters[1].Number))", forSegmentAt: 1)
                     }
                 } catch let error as NSError{
                     print("Parse Error\(error)")

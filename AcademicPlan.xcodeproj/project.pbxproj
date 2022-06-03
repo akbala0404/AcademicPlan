@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B9FB88C558AFE1415F2919B /* Pods_AcademicPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4E06DB5D7B735A83919EAE /* Pods_AcademicPlan.framework */; };
 		FE5B8E222842626100C33C25 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B8E212842626100C33C25 /* PlanTableViewCell.swift */; };
 		FE5CEA5F284007270091B812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA5E284007270091B812 /* AppDelegate.swift */; };
 		FE5CEA61284007270091B812 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA60284007270091B812 /* SceneDelegate.swift */; };
@@ -18,7 +17,23 @@
 		FE5CEA73284007B30091B812 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA72284007B30091B812 /* TableHeaderView.swift */; };
 		FE5CEA78284009070091B812 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CEA77284009070091B812 /* Data.swift */; };
 		FE5CEA7A284009350091B812 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = FE5CEA79284009350091B812 /* Data.json */; };
+		FE8D29BC284A7E3E009768A2 /* Pods_AcademicPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4E06DB5D7B735A83919EAE /* Pods_AcademicPlan.framework */; };
+		FE8D29BD284A7E3E009768A2 /* Pods_AcademicPlan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4E06DB5D7B735A83919EAE /* Pods_AcademicPlan.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE8D29BE284A7E3E009768A2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE8D29BD284A7E3E009768A2 /* Pods_AcademicPlan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3DCB823B9B16FAF37F84C64A /* Pods-AcademicPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPlan.debug.xcconfig"; path = "Target Support Files/Pods-AcademicPlan/Pods-AcademicPlan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B9FB88C558AFE1415F2919B /* Pods_AcademicPlan.framework in Frameworks */,
+				FE8D29BC284A7E3E009768A2 /* Pods_AcademicPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +79,6 @@
 				3DCB823B9B16FAF37F84C64A /* Pods-AcademicPlan.debug.xcconfig */,
 				66276F946C4D5204544AE376 /* Pods-AcademicPlan.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +154,7 @@
 				FE5CEA58284007270091B812 /* Frameworks */,
 				FE5CEA59284007270091B812 /* Resources */,
 				7A2E07132D6C5A570603C8F1 /* [CP] Embed Pods Frameworks */,
+				FE8D29BE284A7E3E009768A2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = AcademicPlan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
